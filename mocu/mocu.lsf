@@ -1,0 +1,11 @@
+#!/bin/bash
+#BSUB -P MED110
+#BSUB -J mocu
+#BSUB -o %J.out
+#BSUB -e %J.err
+#BSUB -W 1440
+#BSUB -nnodes 1
+
+export OMP_NUM_THREADS=1
+
+time jsrun -n 1 -a 1 -c 1 -g 0 /ccs/home/litan/miniconda3/envs/mocu/bin/python3.6 /gpfs/alpine/csc299/scratch/litan/MOCU/new/mocu/scripts/example_linearsys.py.bk
