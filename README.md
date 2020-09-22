@@ -1,3 +1,3 @@
-# Objective Driven Experiment Design framework
+# Objective Driven Experiment Design Framework
 
-This repository include codes for Objective Driven Experiment Design running at scale using [RADICAL Cybertools](https://radical-cybertools.github.io/)
+This repository include workflow codes utilizing the Objective Driven Experiment Design (ODED) framework to run at scale using [RADICAL Cybertools](https://radical-cybertools.github.io/)
