@@ -1,7 +1,0 @@
-#time,event,comp,thread,uid,state,msg
-1600110236.1828396,sync_abs,re.session.login2.litan.018519.0009,MainThread,,,login2.summit.olcf.ornl.gov:10.134.0.32:1600110236.1823244:1600110236.2933624:ntp
-1600110236.1836362,session_start,re.session.login2.litan.018519.0009,MainThread,re.session.login2.litan.018519.0009,,1
-1600110242.1370640,session_ok,re.session.login2.litan.018519.0009,MainThread,re.session.login2.litan.018519.0009,,1
-1600117410.6393661,session_close,re.session.login2.litan.018519.0009,MainThread,re.session.login2.litan.018519.0009,,
-1600117411.4491649,session_stop,re.session.login2.litan.018519.0009,MainThread,re.session.login2.litan.018519.0009,,
-1600117411.4491801,END,re.session.login2.litan.018519.0009,MainThread,,,

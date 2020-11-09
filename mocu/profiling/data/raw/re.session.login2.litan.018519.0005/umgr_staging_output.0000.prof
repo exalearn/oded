@@ -1,6 +1,0 @@
-#time,event,comp,thread,uid,state,msg
-1600054601.8384666,sync_abs,umgr_staging_output.0000,MainThread,,,login2.summit.olcf.ornl.gov:10.134.0.32:1600054601.8383756:1600054601.8549316:ntp
-1600054601.8384967,init1,umgr_staging_output.0000,MainThread,umgr_staging_output.0000,,/gpfs/alpine/csc299/scratch/litan/MOCU/re.session.login2.litan.018519.0005
-1600054601.8420901,component_init,umgr_staging_output.0000,Thread-1,,,
-1600057945.8324678,component_final,umgr_staging_output.0000,Thread-3,,,
-1600057945.8324788,END,umgr_staging_output.0000,Thread-3,,,

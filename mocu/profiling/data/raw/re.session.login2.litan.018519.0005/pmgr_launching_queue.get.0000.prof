@@ -1,2 +1,0 @@
-#time,event,comp,thread,uid,state,msg
-1600053549.6177056,sync_abs,pmgr_launching_queue.get.0000,Thread-1,,,login2.summit.olcf.ornl.gov:10.134.0.32:1600053549.617336:1600053549.62149:ntp
