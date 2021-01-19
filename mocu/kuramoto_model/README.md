@@ -15,7 +15,7 @@ pip install pycuda
 
 ```
 source setup.sh
-python mocu_entk.py -n 120 # -n specifies the number of simulations
+python mocu_entk.py -n 120 # -n specifies the number of simulations and each simulation runs on one GPU
 ```
 
 <!--Next see `run.sh` for possible commands to run on ORNL Summit.
