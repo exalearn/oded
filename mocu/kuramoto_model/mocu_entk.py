@@ -56,7 +56,7 @@ class MOCU(object):
                 ]
             t.executable = '/ccs/home/litan/miniconda3/envs/mocu/bin/python3.6'
             t.arguments = ['$INPUT/runMainForPerformanceMeasure.py', '-n{}'.format(num_sim), '-i{}'.format(i)]
-            t.post_exec = []
+            t.post_exec = ["export TASK_ID={}".format(t.uid),"echo $TASK_ID | cut -d \".\" -f 2"]
             t.cpu_reqs = {
                 'processes': 1,
                 'process_type': None,
