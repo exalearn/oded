@@ -1,0 +1,15 @@
+#time,event,comp,thread,uid,state,msg
+1627232052.0000,sync_abs,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,batch2:10.134.0.42:1627232052:1627232052:1627232052
+1627232052.0000,bootstrap_0_start,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,
+1627232053.0000,ve_setup_start,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,
+1627232053.0000,ve_activate_start,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,
+1627232054.0000,ve_activate_stop,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,
+1627232054.0000,ve_setup_stop,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,
+1627232058.9429,bootstrap_0_ok,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,
+1627236217.9336,killme,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,2021-07-25 14:03:37.914
+1627236217.9429,sigterm,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,2021-07-25 14:03:37.940
+1627236218.9582,agent_final,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,14062:143 2021-07-25 14:03:38.955
+1627236218.9633,cleanup_start,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,
+1627236218.9685,cleanup_stop,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,
+1627236218.9787,bootstrap_0_stop,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,
+1627236218.9835,END,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,

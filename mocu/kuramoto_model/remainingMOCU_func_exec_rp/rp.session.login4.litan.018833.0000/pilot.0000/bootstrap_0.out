@@ -1,0 +1,266 @@
+# -------------------------------------------------------------------
+bootstrap_0 running on host: batch2.summit.olcf.ornl.gov.
+bootstrap_0 started as     : './bootstrap_0.sh -p pilot.0000 -s rp.session.login4.litan.018833.0000 -m use -r installed -b anaconda -g default -v /ccs/home/litan/miniconda3/envs/mocu-pilot/ -y 120 -z rp.session.login4.litan.018833.0000.pmgr_launching.0000.tgz -e module unload xl -e module unload xalt -e module unload spectrum-mpi -e module unload py-pip -e module unload py-virtualenv -e module unload py-setuptools -e module load   gcc/6.4.0 -e module load   cuda -e module load   zeromq/4.2.5 -e module load   python/3.7.0 -e module list -w module unload xl -w module unload xalt -w module unload spectrum-mpi -w module unload py-pip -w module unload py-virtualenv -w module unload py-setuptools -w module load   gcc/6.4.0 -w module load   cuda -w module load   zeromq/4.2.5 -w module load   python/3.7.0 -w ulimit -u 65536'
+safe environment of bootstrap_0
+bootstrap_0 stderr redirected to stdout
+
+# -------------------------------------------------------------------
+#
+# Running pre_bootstrap_0 command
+# cmd: module unload xl
+#
+
+Inactive Modules:
+  1) spectrum-mpi
+
+#
+# SUCCESS
+#
+# -------------------------------------------------------------------
+
+# -------------------------------------------------------------------
+#
+# Running pre_bootstrap_0 command
+# cmd: module unload xalt
+#
+#
+# SUCCESS
+#
+# -------------------------------------------------------------------
+
+# -------------------------------------------------------------------
+#
+# Running pre_bootstrap_0 command
+# cmd: module unload spectrum-mpi
+#
+#
+# SUCCESS
+#
+# -------------------------------------------------------------------
+
+# -------------------------------------------------------------------
+#
+# Running pre_bootstrap_0 command
+# cmd: module unload py-pip
+#
+#
+# SUCCESS
+#
+# -------------------------------------------------------------------
+
+# -------------------------------------------------------------------
+#
+# Running pre_bootstrap_0 command
+# cmd: module unload py-virtualenv
+#
+#
+# SUCCESS
+#
+# -------------------------------------------------------------------
+
+# -------------------------------------------------------------------
+#
+# Running pre_bootstrap_0 command
+# cmd: module unload py-setuptools
+#
+#
+# SUCCESS
+#
+# -------------------------------------------------------------------
+
+# -------------------------------------------------------------------
+#
+# Running pre_bootstrap_0 command
+# cmd: module load   gcc/6.4.0
+#
+#
+# SUCCESS
+#
+# -------------------------------------------------------------------
+
+# -------------------------------------------------------------------
+#
+# Running pre_bootstrap_0 command
+# cmd: module load   cuda
+#
+#
+# SUCCESS
+#
+# -------------------------------------------------------------------
+
+# -------------------------------------------------------------------
+#
+# Running pre_bootstrap_0 command
+# cmd: module load   zeromq/4.2.5
+#
+#
+# SUCCESS
+#
+# -------------------------------------------------------------------
+
+# -------------------------------------------------------------------
+#
+# Running pre_bootstrap_0 command
+# cmd: module load   python/3.7.0
+#
+#
+# SUCCESS
+#
+# -------------------------------------------------------------------
+
+# -------------------------------------------------------------------
+#
+# Running pre_bootstrap_0 command
+# cmd: module list
+#
+
+Currently Loaded Modules:
+  1) hsi/5.0.2.p5            4) DefApps         7) zeromq/4.2.5
+  2) lsf-tools/2.0           5) gcc/6.4.0       8) python/3.7.0
+  3) darshan-runtime/3.1.7   6) cuda/10.1.243
+
+ 
+
+#
+# SUCCESS
+#
+# -------------------------------------------------------------------
+# -------------------------------------------------------------------
+# untar sandbox
+# -------------------------------------------------------------------
+pilot.0000/
+pilot.0000/pilot.0000.prof.tgz
+pilot.0000/pilot.0000.log.tgz
+# -------------------------------------------------------------------
+# -------------------------------------------------------------------
+# Touching output tarballs
+# -------------------------------------------------------------------
+create gtod
+1627232052.0000,sync_abs,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,batch2:10.134.0.42:1627232052:1627232052:1627232052
+1627232052.0000,bootstrap_0_start,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,
+VIRTENV           : /ccs/home/litan/miniconda3/envs/mocu-pilot/
+VIRTENV normalized: /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot
+PYTHON            : /autofs/nccs-svm1_sw/summit/.swci/0-core/opt/spack/20180914/linux-rhel7-ppc64le/gcc-4.8.5/python-3.7.0-ei3mpdncii74xsn55t5kxpuc46i3oezn/bin/python
+PYTHON_VERSION    : 3.7
+PIP               : /autofs/nccs-svm1_sw/summit/.swci/0-core/opt/spack/20180914/linux-rhel7-ppc64le/gcc-4.8.5/python-3.7.0-ei3mpdncii74xsn55t5kxpuc46i3oezn/bin/python -m pip
+PIP version       : pip 10.0.1 from /autofs/nccs-svm1_sw/summit/.swci/0-core/opt/spack/20180914/linux-rhel7-ppc64le/gcc-4.8.5/python-3.7.0-ei3mpdncii74xsn55t5kxpuc46i3oezn/lib/python3.7/site-packages/pip (python 3.7)
+1627232053.0000,ve_setup_start,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,
+virtenv_create    : FALSE
+virtenv_update    : FALSE
+rp install sources: 
+rp install target : 
+rp install lock   : FALSE
+do not create virtenv /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot
+1627232053.0000,ve_activate_start,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,
+VIRTENV activated : /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot
+RP_PATH           : /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot/bin
+PYTHON            : /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot/bin/python
+PYTHON_VERSION    : 3.7
+PIP               : /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot/bin/python -m pip
+PIP version       : pip 21.1.2 from /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot/lib/python3.7/site-packages/pip (python 3.7)
+VE_MOD_PREFIX init: /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot/lib/python3.7/site-packages
+VE_MOD_PREFIX     : /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot/lib/python3.7/site-packages
+RP_MOD_PREFIX     : /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot/rp_install/lib/python3.7/site-packages
+VE_PYTHONPATH     : /ccs/home/litan/DrugWorkflows/workflow-3/amber18/lib/python2.7/site-packages
+1627232054.0000,ve_activate_stop,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,
+do not update virtenv /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot
+no RP install target - skip install
+1627232054.0000,ve_setup_stop,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,
+verify python viability: /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot/bin/python ... ok
+verify module viability: radical.pilot   ... ok
+verify module viability: radical.saga    ... ok
+verify module viability: radical.utils   ... ok
+verify module viability: pymongo         ... ok
+verify module viability: colorama        ... ok
+verify module viability: hostlist        ... ok
+verify module viability: ntplib          ... ok
+verify module viability: zmq             ... ok
+verify module viability: netifaces       ... ok
+verify module viability: setproctitle    ... ok
+verify module viability: msgpack         ... ok
+verify module viability: future          ... ok
+verify module viability: regex           ... ok
+verify module viability: dill            ... ok
+verify module viability: mpi4py          ... ok
+verify module viability: whichcraft      ... ok
+
+---------------------------------------------------------------------
+
+Python 3.7.9 (/autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot/bin/python)
+PYTHONPATH: /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot/rp_install/lib/python3.7/site-packages:/autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot/lib/python3.7/site-packages:/ccs/home/litan/DrugWorkflows/workflow-3/amber18/lib/python2.7/site-packages
+
+  python               : /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot/bin/python3
+  pythonpath           : /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot/rp_install/lib/python3.7/site-packages:/autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot/lib/python3.7/site-packages:/ccs/home/litan/DrugWorkflows/workflow-3/amber18/lib/python2.7/site-packages
+  version              : 3.7.9
+  virtualenv           : mocu-pilot
+
+  radical.gtod         : 1.5.0
+  radical.pilot        : 1.6.6-v1.6.6-91-g3de34a4@feature-funcs_v2
+  radical.saga         : 1.6.6
+  radical.utils        : 1.6.6
+
+RU: 1.6.6 /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot/lib/python3.7/site-packages/radical/utils/__init__.py
+RS: 1.6.6 /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot/lib/python3.7/site-packages/radical/saga/__init__.py
+RP: 1.6.6-v1.6.6-91-g3de34a4@feature-funcs_v2 /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot/lib/python3.7/site-packages/radical/pilot/__init__.py
+install ok!
+
+---------------------------------------------------------------------
+
+
+# -------------------------------------------------------------------
+# Launching radical-pilot-agent 
+# CMDLINE: /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot/bin/python /autofs/nccs-svm1_home1/litan/miniconda3/envs/mocu-pilot/bin/radical-pilot-agent
+ntphost: 46.101.140.169
+ping: socket: Operation not permitted
+1627232058.9429,bootstrap_0_ok,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,
+.........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................1627236217.9336,killme,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,2021-07-25 14:03:37.914
+1627236217.9429,sigterm,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,2021-07-25 14:03:37.940
+send SIGTERM to 14062 (10552)
+COND start 'kill -0  14062' (I: 1 T: 30)
+./bootstrap_0.sh: line 310: 14062 Terminated              ./bootstrap_2.sh 'agent.0' > agent.0.bootstrap_2.out 2> agent.0.bootstrap_2.err
+./bootstrap_0.sh: line 323: kill: (14062) - No such process
+COND failed (1)
+agent 14062 is final
+agent 14062 is final (143)
+1627236218.9582,agent_final,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,14062:143 2021-07-25 14:03:38.955
+
+# -------------------------------------------------------------------
+# CLEANUP: 
+#
+1627236218.9633,cleanup_start,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,
+1627236218.9685,cleanup_stop,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,
+#
+# -------------------------------------------------------------------
+
+# -------------------------------------------------------------------
+#
+# Mark final profiling entry ...
+1627236218.9787,bootstrap_0_stop,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,
+1627236218.9835,END,bootstrap_0,MainThread,pilot.0000,PMGR_ACTIVE_PENDING,
+#
+# -------------------------------------------------------------------
+
+# -------------------------------------------------------------------
+#
+# We wait for some seconds for the FS to flush profiles.
+# Success is assumed when all profiles end with a 'END' event.
+#
+# -------------------------------------------------------------------
+delay profile sync @ 1: 31 != 7
+delay profile sync @ 2: 31 != 7
+delay profile sync @ 3: 31 != 7
+delay profile sync @ 4: 31 != 7
+abort profile sync @ 5: 31 != 7
+nprofs 31 =? nend 7
+Sun Jul 25 14:03:43 EDT 2021
+
+# -------------------------------------------------------------------
+#
+# Tarring profiles ...
+-rw-rw-r-- 1 litan litan 80798 Jul 25 14:03 pilot.0000.prof.tgz
+#
+# -------------------------------------------------------------------
+
+# -------------------------------------------------------------------
+#
+# Tarring logfiles ...

@@ -1,0 +1,9 @@
+1627232064.024 : agent_staging_output_queue : 14979 : 35184372371984 : DEBUG    : bridge agent_staging_output_queue init
+1627232064.024 : agent_staging_output_queue : 14979 : 35184372371984 : INFO     : start bridge agent_staging_output_queue
+1627232064.025 : agent_staging_output_queue : 14979 : 35184372371984 : INFO     : bridge in  agent_staging_output_queue: tcp://10.134.0.42:45687
+1627232064.025 : agent_staging_output_queue : 14979 : 35184372371984 : INFO     :        out agent_staging_output_queue: tcp://10.134.0.42:36381
+1627232064.030 : agent_staging_output_queue : 14979 : 35184372371984 : INFO     : started bridge agent_staging_output_queue
+1627232064.032 : agent_staging_output_queue : 14979 : 35184372371984 : INFO     : connect pub to heartbeat: tcp://10.134.0.42:32913
+1627232064.032 : agent_staging_output_queue : 14979 : 35184372371984 : DEBUG    : start heartbeat
+1627232064.032 : agent_staging_output_queue : 14979 : 35184372371984 : INFO     : connect sub to heartbeat: tcp://10.134.0.42:36295
+1627232064.033 : agent_staging_output_queue : 14979 : 35184372371984 : DEBUG    : ~~ heartbeat: heartbeat

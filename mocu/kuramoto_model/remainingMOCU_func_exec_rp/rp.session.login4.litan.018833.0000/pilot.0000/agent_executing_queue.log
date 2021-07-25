@@ -1,0 +1,9 @@
+1627232063.200 : agent_executing_queue : 14831 : 35184372371984 : DEBUG    : bridge agent_executing_queue init
+1627232063.200 : agent_executing_queue : 14831 : 35184372371984 : INFO     : start bridge agent_executing_queue
+1627232063.201 : agent_executing_queue : 14831 : 35184372371984 : INFO     : bridge in  agent_executing_queue: tcp://10.134.0.42:36793
+1627232063.201 : agent_executing_queue : 14831 : 35184372371984 : INFO     :        out agent_executing_queue: tcp://10.134.0.42:41941
+1627232063.202 : agent_executing_queue : 14831 : 35184372371984 : INFO     : started bridge agent_executing_queue
+1627232063.204 : agent_executing_queue : 14831 : 35184372371984 : INFO     : connect pub to heartbeat: tcp://10.134.0.42:32913
+1627232063.204 : agent_executing_queue : 14831 : 35184372371984 : DEBUG    : start heartbeat
+1627232063.204 : agent_executing_queue : 14831 : 35184372371984 : INFO     : connect sub to heartbeat: tcp://10.134.0.42:36295
+1627232063.205 : agent_executing_queue : 14831 : 35184372371984 : DEBUG    : ~~ heartbeat: heartbeat

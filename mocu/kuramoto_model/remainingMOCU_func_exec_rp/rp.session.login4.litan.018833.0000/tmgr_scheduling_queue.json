@@ -1,0 +1,17 @@
+{
+    "bulk_size": 0,
+    "channel": "tmgr_scheduling_queue",
+    "cmgr": "cmgr.0002",
+    "heartbeat": {
+        "addr_pub": "tcp://10.134.0.34:34765",
+        "addr_sub": "tcp://10.134.0.34:33937",
+        "interval": 1.0,
+        "timeout": 60.0
+    },
+    "kind": "queue",
+    "log_level": "error",
+    "path": "/gpfs/alpine/csc299/scratch/litan/MOCU/Byung-Jun/new/ExaLearn-ODED-Kuramoto-main/N7/github/oded/mocu/kuramoto_model/remainingMOCU_func_exec_rp/rp.session.login4.litan.018833.0000",
+    "sid": "rp.session.login4.litan.018833.0000",
+    "stall_hwm": 0,
+    "uid": "tmgr_scheduling_queue"
+}

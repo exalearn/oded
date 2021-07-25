@@ -1,0 +1,19 @@
+1627232068.436 : update.0000          : 16109 : 35184547656112 : INFO     : connect pub to state_pubsub: tcp://10.134.0.42:46375
+1627232068.436 : update.0000          : 16109 : 35184547656112 : DEBUG    : registered publisher for state_pubsub
+1627232068.437 : update.0000          : 16109 : 35184547656112 : INFO     : connect pub to control_pubsub: tcp://10.134.0.42:34997
+1627232068.437 : update.0000          : 16109 : 35184547656112 : DEBUG    : registered publisher for control_pubsub
+1627232068.438 : update.0000          : 16109 : 35184547656112 : INFO     : connect sub to control_pubsub: tcp://10.134.0.42:38811
+1627232068.438 : update.0000          : 16109 : 35184547656112 : DEBUG    : ~~ control_pubsub: control_pubsub
+1627232068.738 : update.0000          : 16109 : 35184547656112 : INFO     : connect sub to state_pubsub: tcp://10.134.0.42:40243
+1627232068.823 : update.0000          : 16109 : 35184547656112 : DEBUG    : ~~ state_pubsub: state_pubsub
+1627232068.823 : update.0000          : 16109 : 35184547656112 : DEBUG    : START: update.0000 register idler update.0000.idler._idle_cb
+1627232068.823 : update.0000          : 16109 : 35184872452528 : DEBUG    : start idle thread: <bound method Update._idle_cb of <radical.pilot.worker.update.Update object at 0x200009f51a10>>
+1627232068.823 : update.0000          : 16109 : 35184547656112 : DEBUG    : update.0000 registered idler update.0000.idler._idle_cb
+1627232068.837 : update.0000          : 16109 : 35184372371984 : DEBUG    : start heartbeat
+1627232068.837 : update.0000          : 16109 : 35184372371984 : INFO     : connect sub to heartbeat: tcp://10.134.0.42:36295
+1627232068.838 : update.0000          : 16109 : 35184372371984 : DEBUG    : ~~ heartbeat: heartbeat
+1627236214.526 : update.0000          : 16109 : 35184846107056 : DEBUG    : command incoming: {'cmd': 'terminate', 'arg': None}
+1627236214.526 : update.0000          : 16109 : 35184846107056 : INFO     : got termination command
+1627236214.828 : update.0000          : 16109 : 35184846107056 : INFO     : stop update.0000 (16109 : Thread-2) [radical.pilot.utils.component.Update._cancel_monitor_cb]
+1627236214.842 : update.0000          : 16109 : 35184547656112 : DEBUG    : _finalize()
+1627236214.842 : update.0000          : 16109 : 35184547656112 : DEBUG    : update.0000 close prof

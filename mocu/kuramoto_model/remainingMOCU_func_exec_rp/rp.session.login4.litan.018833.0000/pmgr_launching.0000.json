@@ -1,0 +1,18 @@
+{
+    "base": "/gpfs/alpine/csc299/scratch/litan/MOCU/Byung-Jun/new/ExaLearn-ODED-Kuramoto-main/N7/github/oded/mocu/kuramoto_model/remainingMOCU_func_exec_rp",
+    "cmgr": "cmgr.0001",
+    "count": 1,
+    "db_poll_sleeptime": 1.0,
+    "dburl": "mongodb://litan:sccDg7PxE3UjhA5L@129.114.17.185:27017/rct-test",
+    "heartbeat": {
+        "addr_pub": "tcp://10.134.0.34:33193",
+        "addr_sub": "tcp://10.134.0.34:45987",
+        "interval": 1.0,
+        "timeout": 60.0
+    },
+    "kind": "pmgr_launching",
+    "owner": "pmgr.0000",
+    "path": "/gpfs/alpine/csc299/scratch/litan/MOCU/Byung-Jun/new/ExaLearn-ODED-Kuramoto-main/N7/github/oded/mocu/kuramoto_model/remainingMOCU_func_exec_rp/rp.session.login4.litan.018833.0000",
+    "sid": "rp.session.login4.litan.018833.0000",
+    "uid": "pmgr_launching.0000"
+}

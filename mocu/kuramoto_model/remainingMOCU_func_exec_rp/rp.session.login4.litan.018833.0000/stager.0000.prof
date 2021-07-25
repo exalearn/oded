@@ -1,0 +1,16 @@
+#time,event,comp,thread,uid,state,msg
+1627231966.6861796,sync_abs,stager.0000,MainThread,,,login4.summit.olcf.ornl.gov:10.134.0.34:1627231966.6858819:1627231966.6899338:ntp
+1627231966.6882355,comp_start,stager.0000,MainThread,stager.0000,,
+#time,event,comp,thread,uid,state,msg
+1627231966.9433634,sync_abs,stager.0000,MainThread,,,login4.summit.olcf.ornl.gov:10.134.0.34:1627231966.9431698:1627231966.9472218:ntp
+1627231966.9433992,init1,stager.0000,MainThread,stager.0000,,/gpfs/alpine/csc299/scratch/litan/MOCU/Byung-Jun/new/ExaLearn-ODED-Kuramoto-main/N7/github/oded/mocu/kuramoto_model/remainingMOCU_func_exec_rp/rp.session.login4.litan.018833.0000
+1627231967.0095515,component_init,stager.0000,Thread-1,,,
+1627231974.9015181,get,stager.0000,Thread-1,sd.0000,NEW,
+1627231974.9016991,get,stager.0000,Thread-1,sd.0001,NEW,
+1627231974.9019303,staging_start,stager.0000,Thread-1,,,sd.0000
+1627231976.8184297,staging_stop,stager.0000,Thread-1,,,sd.0000
+1627231976.8185194,staging_start,stager.0000,Thread-1,,,sd.0001
+1627231977.2344437,staging_stop,stager.0000,Thread-1,,,sd.0001
+1627231977.9065461,get,stager.0000,Thread-1,sd.0002,NEW,
+1627231977.9067285,staging_start,stager.0000,Thread-1,,,sd.0002
+1627231978.1214917,staging_stop,stager.0000,Thread-1,,,sd.0002

@@ -17,28 +17,8 @@ import matplotlib.pyplot as plt
 import radical.pilot as rp
 import radical.utils as ru
 
-##from MOCU import *
-##from findMOCUSequence import *
-##from runMainForPerformanceMeasure import *
 from radical.pilot import PythonTask
-
 pythontask = PythonTask.pythontask
-
-##@pythontask
-def mathma(a,b):
-    import math
-    t = math.exp(a * b)
-    ##print(t)
-    return t
-
-from numba import cuda
-
-# CUDA kernel
-##@pythontask
-@cuda.jit
-def cuda_func(a):
-    for i in range(1024):
-        a[i] += 1
 
 import pycuda.autoinit
 import pycuda.driver as drv
@@ -445,62 +425,9 @@ def computeExpectedRemainingMOCU(i, j, K_max, w, N, h, MVirtual, TVirtual, aUppe
 
     it_temp_val = np.zeros(it_idx)
 
-    '''report = ru.Reporter(name='radical.pilot')
-    report.title('RP Tasks for MOCU on GPU')
-    session = rp.Session()
-    report.header('submit pilots')
-    pmgr = rp.PilotManager(session=session)
-    n_nodes = 2#math.ceil(float(int(update_cnt) / 6))
-    pd_init = {'resource': 'ornl.summit',
-               'runtime': 30,
-               'exit_on_error': True,
-               'project': 'CSC299',
-               'queue': 'batch',
-               'access_schema': 'local',
-               'cores': 168 * n_nodes,
-               'gpus': 6 * n_nodes
-               }
-    pdesc = rp.PilotDescription(pd_init)
-    pilot = pmgr.submit_pilots(pdesc)
-    report.header('submit tasks')
-    tmgr = rp.TaskManager(session=session)
-    tmgr.add_pilots(pilot)
-    report.progress_tgt(update_cnt, label='create')
-    tds = list()'''
-
     for l in range(it_idx):
         # it_temp_val[l] = MOCU(K_max, w, N, h , MVirtual, TVirtual, aLower, aUpper, ((iteration * N * N * l) + (i*N) + j + 3))
         it_temp_val[l] = MOCU(K_max, w, N, h, MVirtual, TVirtual, aLower, aUpper, 0)
-
-        '''td = rp.TaskDescription()
-        td.pre_exec = []
-        td.executable = MOCU_RP(K_max, w, N, h, MVirtual, TVirtual, aLower, aUpper, 0)
-        td.arguments = []
-        td.gpu_processes = 1
-        td.cpu_processes = 1
-        td.cpu_threads = 1
-        td.cpu_process_type = rp.FUNC
-        tds.append(td)
-        report.progress()
-
-    report.progress_done()
-    tasks = tmgr.submit_tasks(tds)
-    report.header('gather results')
-    tmgr.wait_tasks()'''
-
-    '''for task in (tasks[-10:]):
-        if task.state == rp.DONE:
-            print('\t+ %s: %-10s: %10s: %s'
-                  % (task.uid, task.state, task.pilot, task.stdout))
-        else:
-            print('\t- %s: %-10s: %10s: %s'
-                  % (task.uid, task.state, task.pilot, task.stderr))'''
-    '''for l in range(it_idx):
-        it_temp_val[l] = tasks[l].stdout
-        ##print(it_temp_val[l])
-
-    report.header('finalize')
-    session.close(download=True)'''
 
     # print("     Computation time for the expected remaining MOCU (P_syn): ", i, j, time.time() - ttMOCU)
     MOCU_matrix_syn = np.mean(it_temp_val)
@@ -514,58 +441,10 @@ def computeExpectedRemainingMOCU(i, j, K_max, w, N, h, MVirtual, TVirtual, aUppe
     P_nonsyn = (a_tilde - aLowerBoundUpdated[i, j]) / (aUpperBoundUpdated[i, j] - aLowerBoundUpdated[i, j])
 
     it_temp_val = np.zeros(it_idx)
-    ##print("Wenyi29\n")
-
-    '''report = ru.Reporter(name='radical.pilot')
-    report.title('RP Tasks for MOCU on GPU')
-    session = rp.Session()
-    report.header('submit pilots')
-    pmgr = rp.PilotManager(session=session)
-    n_nodes = 2#math.ceil(float(int(update_cnt) / 6))
-    pd_init = {'resource': 'ornl.summit',
-               'runtime': 30,
-               'exit_on_error': True,
-               'project': 'CSC299',
-               'queue': 'batch',
-               'access_schema': 'local',
-               'cores': 168 * n_nodes,
-               'gpus': 6 * n_nodes
-               }
-    pdesc = rp.PilotDescription(pd_init)
-    pilot = pmgr.submit_pilots(pdesc)
-    report.header('submit tasks')
-    tmgr = rp.TaskManager(session=session)
-    tmgr.add_pilots(pilot)
-    report.progress_tgt(update_cnt, label='create')
-    tds = list()'''
 
     for l in range(it_idx):
         # it_temp_val[l] = MOCU(K_max, w, N, h , MVirtual, TVirtual, aLower, aUpper, ((2 * iteration * N * N * l) + (i*N) + j + 2))
         it_temp_val[l] = MOCU(K_max, w, N, h, MVirtual, TVirtual, aLower, aUpper, 0)
-        ##print(it_temp_val[l])
-
-        '''td = rp.TaskDescription()
-        td.pre_exec = []
-        td.executable = MOCU_RP(K_max, w, N, h, MVirtual, TVirtual, aLower, aUpper, 0)
-        td.arguments = []
-        td.gpu_processes = 1
-        td.cpu_processes = 1
-        td.cpu_threads = 1
-        td.cpu_process_type = rp.FUNC
-        tds.append(td)
-        report.progress()
-
-    report.progress_done()
-    tasks = tmgr.submit_tasks(tds)
-    report.header('gather results')
-    tmgr.wait_tasks()
-
-    for l in range(it_idx):
-        it_temp_val[l] = tasks[l].stdout
-        ##print(it_temp_val[l])
-
-    report.header('finalize')
-    session.close(download=True)'''
 
     # print("     Computation time for the expected remaining MOCU (P_nonsyn): ", i, j, time.time() - ttMOCU)
     MOCU_matrix_nonsyn = np.mean(it_temp_val)
@@ -591,52 +470,7 @@ def findMOCUSequence(syncThresholds, isSynchronized, MOCUInitial, K_max, w, N, h
     isInitiallyComputed2 = False
     R = np.zeros((N, N))
 
-    '''report = ru.Reporter(name='radical.pilot')
-    report.title('An HPC Workflow for Finding MOCU Sequence on GPU')
-    session = rp.Session()
-    report.header('submit pilots')
-    pmgr = rp.PilotManager(session=session)
-    n_nodes = math.ceil(float(int(update_cnt)/6))
-    pd_init = {'resource'     : 'ornl.summit',
-               'runtime'      : 120,
-               'exit_on_error': True,
-               'project'      : 'CSC299',
-               'queue'        : 'batch',
-               'acess_scheme' : 'local',
-               'cores'        : 168 * n_nodes,
-               'gpus'         : 6 * n_nodes
-              }
-    pdesc = rp.PilotDescription(pd_init)
-    pilot = pmgr.submit_pilots(pdesc)
-    report.header('submit tasks')
-    tmgr = rp.TaskManager(session=session)
-    tmgr.add_pilots(pilot)
-    report.progress_tgt(update_cnt, label='create')
-    ##tds = list()'''
-
     for iteration in range(1, update_cnt+1):
-        '''report = ru.Reporter(name='radical.pilot')
-        report.title('RP Tasks for MOCU on GPU')
-        session = rp.Session()
-        report.header('submit pilots')
-        pmgr = rp.PilotManager(session=session)
-        n_nodes = math.ceil(float(int(update_cnt)/6))
-        pd_init = {'resource': 'ornl.summit',
-                   'runtime': 120,
-                   'exit_on_error': True,
-                   'project': 'CSC299',
-                   'queue': 'batch',
-                   'access_schema': 'local',
-                   'cores': 168 * n_nodes,
-                   'gpus': 6 * n_nodes
-                   }
-        pdesc = rp.PilotDescription(pd_init)
-        pilot = pmgr.submit_pilots(pdesc)
-        report.header('submit tasks')
-        tmgr = rp.TaskManager(session=session)
-        tmgr.add_pilots(pilot)
-        report.progress_tgt(update_cnt, label='create')
-        tds = list()'''
 
         tds = list()
 
@@ -651,10 +485,9 @@ def findMOCUSequence(syncThresholds, isSynchronized, MOCUInitial, K_max, w, N, h
                         '''MOCU_RP_starttime = time.time()
                         R[i, j] = computeExpectedRemainingMOCU(i, j, K_max, w, N, h, MVirtual, TVirtual, aUpperBoundUpdated, aLowerBoundUpdated, it_idx, pseudoRandomSequence)
                         MOCU_RP_endtime = time.time() - MOCU_RP_starttime
-                        print("Wenyi29: ", MOCU_RP_endtime)'''
+                        print("FUNC_runtime: ", MOCU_RP_endtime)'''
                         td = rp.TaskDescription()
                         td.pre_exec = []
-                        ##td.executable = mathma(2, 7)
                         td.executable = computeExpectedRemainingMOCU(i, j, K_max, w, N, h, MVirtual, TVirtual, aUpperBoundUpdated, aLowerBoundUpdated, it_idx, pseudoRandomSequence)
                         td.arguments = []
                         td.gpu_processes = 1
@@ -664,11 +497,6 @@ def findMOCUSequence(syncThresholds, isSynchronized, MOCUInitial, K_max, w, N, h
                         tds.append(td)
                         report.progress()
                         ExprCount += 1
-                        # R[i, j] = np.fromstring(td.executable, dtype=float, sep=',')
-                        # R[i, j] = np.float128(td.executable)
-                        # print(td.executable, "Wenyi", td.stdout)
-                        # R[i, j] = td.executable
-                        # R[i, j] = 0.0
         # print("Computed erMOCU")
         # print(R)
 
@@ -678,14 +506,7 @@ def findMOCUSequence(syncThresholds, isSynchronized, MOCUInitial, K_max, w, N, h
             report.header('gather results')
             tmgr.wait_tasks()
 
-        '''for task in (tasks[-10:]):
-            if task.state == rp.DONE:
-                print('\t+ %s: %-10s: %10s: %s'
-                      % (task.uid, task.state, task.pilot, task.stdout))
-            else:
-                print('\t- %s: %-10s: %10s: %s'
-                      % (task.uid, task.state, task.pilot, task.stderr))'''
-        print("Wenyi29: ", ExprCount)
+        print("Num_remainning_MOCU: ", ExprCount)
         ExprCountConst = ExprCount
         if (not isInitiallyComputed2) or iterative:
             # Computing the expected remaining MOCU
@@ -696,9 +517,6 @@ def findMOCUSequence(syncThresholds, isSynchronized, MOCUInitial, K_max, w, N, h
                         R[i, j] = tasks[ExprCountConst-ExprCount].stdout
                         ##print(tasks[ExprCountConst-ExprCount].stdout, i, j)
                         ExprCount -= 1
-
-        '''report.header('finalize')
-        session.close(download=True)'''
 
         min_ind = np.where(R == np.min(R[np.nonzero(R)]))
 
@@ -748,55 +566,9 @@ def findMOCUSequence(syncThresholds, isSynchronized, MOCUInitial, K_max, w, N, h
         #     cnt = cnt + 1
         it_temp_val = np.zeros(it_idx)
 
-        '''report = ru.Reporter(name='radical.pilot')
-        report.title('RP Tasks for MOCU on GPU')
-        session = rp.Session()
-        report.header('submit pilots')
-        pmgr = rp.PilotManager(session=session)
-        n_nodes = 2#math.ceil(float(int(update_cnt) / 6))
-        pd_init = {'resource': 'ornl.summit',
-                   'runtime': 30,
-                   'exit_on_error': True,
-                   'project': 'CSC299',
-                   'queue': 'batch',
-                   'access_schema': 'local',
-                   'cores': 168 * n_nodes,
-                   'gpus': 6 * n_nodes
-                   }
-        pdesc = rp.PilotDescription(pd_init)
-        pilot = pmgr.submit_pilots(pdesc)
-        report.header('submit tasks')
-        tmgr = rp.TaskManager(session=session)
-        tmgr.add_pilots(pilot)
-        report.progress_tgt(update_cnt, label='create')
-        tds = list()'''
-
         for l in range(it_idx):
             # it_temp_val[l] = MOCU(K_max, w, N, h , MReal, TReal, aLowerBoundUpdated, aUpperBoundUpdated, ((iteration * N * N * N) + l))
             it_temp_val[l] = MOCU_orig(K_max, w, N, h, MReal, TReal, aLowerBoundUpdated, aUpperBoundUpdated, 0)
-
-            '''td = rp.TaskDescription()
-            td.pre_exec = []
-            td.executable = MOCU_RP(K_max, w, N, h, MReal, TReal, aLowerBoundUpdated, aUpperBoundUpdated, 0)
-            td.arguments = []
-            td.gpu_processes = 1
-            td.cpu_processes = 1
-            td.cpu_threads = 1
-            td.cpu_process_type = rp.FUNC
-            tds.append(td)
-            report.progress()
-
-        report.progress_done()
-        tasks = tmgr.submit_tasks(tds)
-        report.header('gather results')
-        tmgr.wait_tasks()'''
-
-        '''for l in range(it_idx):
-            it_temp_val[l] = tasks[l].stdout
-            ##print(it_temp_val[l])
-
-        report.header('finalize')
-        session.close(download=True)'''
 
         MOCUCurve[iteration] = np.mean(it_temp_val)
         print("before adjusting")
@@ -804,13 +576,6 @@ def findMOCUSequence(syncThresholds, isSynchronized, MOCUInitial, K_max, w, N, h
         if MOCUCurve[iteration] > MOCUCurve[iteration - 1]:
             MOCUCurve[iteration] = MOCUCurve[iteration - 1]
         print("The end of iteration: actual MOCU", MOCUCurve[iteration])
-
-    '''report.progress_done()
-    tasks = tmgr.submit_tasks(tds)
-    report.header('gather results')
-    tmgr.wait_tasks()'''
-    '''report.header('finalize')
-    session.close(download=True)'''
 
     print(optimalExperiments)
     return MOCUCurve, optimalExperiments, timeComplexity
@@ -901,28 +666,9 @@ if __name__ == '__main__':
         report.progress_tgt(update_cnt, label='create')
         ##tds = list()
 
-        ##n = 1024
-        ##a = np.ones(n, dtype = np.float64)
-
         for indexMethod in range(len(listMethods)):     
+
             timeMOCU = time.time()
-
-            ##my_kernel[blockspergrid, threadsperblock](data)
-
-            '''td = rp.TaskDescription()
-            td.pre_exec = []
-            ##td.executable = cuda_func(a)
-            ##td.executable = mathma(2, 7)
-            td.executable = MOCU(K_max, w, N, deltaT, MReal, TReal, aInitialLower.copy(), aInitialUpper.copy(), 0)
-            td.arguments = []
-            td.gpu_processes = 1
-            td.cpu_processes = 1
-            td.cpu_threads = 1
-            td.cpu_process_type = rp.FUNC
-            tds.append(td)
-            report.progress()
-
-            MOCUInitial = 0.0'''
 
             MOCUInitial = MOCU_orig(K_max, w, N, deltaT, MReal, TReal, aInitialLower.copy(), aInitialUpper.copy(), 0)
 
@@ -952,19 +698,6 @@ if __name__ == '__main__':
             outMOCUFile.close()
             outTimeFile.close()
             outSequenceFile.close()
-
-        '''report.progress_done()
-        tasks = tmgr.submit_tasks(tds)
-        report.header('gather results')
-        tmgr.wait_tasks()
-
-        for task in (tasks[-10:]):
-            if task.state == rp.DONE:
-                print('\t+ %s: %-10s: %10s: %s'
-                      % (task.uid, task.state, task.pilot, task.stdout))
-            else:
-                print('\t- %s: %-10s: %10s: %s'
-                      % (task.uid, task.state, task.pilot, task.stderr))'''
 
         report.header('finalize')
         session.close(download=True)

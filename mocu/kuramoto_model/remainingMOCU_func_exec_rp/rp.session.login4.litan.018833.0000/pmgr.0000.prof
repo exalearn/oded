@@ -1,0 +1,12 @@
+#time,event,comp,thread,uid,state,msg
+1627231968.0822351,sync_abs,pmgr.0000,MainThread,,,login4.summit.olcf.ornl.gov:10.134.0.34:1627231968.081786:1627231968.0858378:ntp
+1627231968.0828791,init1,pmgr.0000,MainThread,pmgr.0000,,/gpfs/alpine/csc299/scratch/litan/MOCU/Byung-Jun/new/ExaLearn-ODED-Kuramoto-main/N7/github/oded/mocu/kuramoto_model/remainingMOCU_func_exec_rp/rp.session.login4.litan.018833.0000
+1627231968.0846958,component_init,pmgr.0000,Thread-4,,,
+1627231972.4835105,setup_done,pmgr.0000,MainThread,pmgr.0000,,
+1627231973.6554775,advance,pmgr.0000,MainThread,pilot.0000,NEW,
+1627231973.7062020,advance,pmgr.0000,MainThread,pilot.0000,PMGR_LAUNCHING_PENDING,
+1627231973.7063673,put,pmgr.0000,MainThread,pilot.0000,PMGR_LAUNCHING_PENDING,pmgr_launching_queue.put.0000
+1627231973.7418580,advance,pmgr.0000,Thread-12,pilot.0000,PMGR_LAUNCHING,
+1627231980.7944839,advance,pmgr.0000,Thread-12,pilot.0000,PMGR_ACTIVE_PENDING,
+1627232070.8962979,advance,pmgr.0000,Thread-10,pilot.0000,PMGR_ACTIVE,
+1627236215.4809241,advance,pmgr.0000,Thread-10,pilot.0000,CANCELED,

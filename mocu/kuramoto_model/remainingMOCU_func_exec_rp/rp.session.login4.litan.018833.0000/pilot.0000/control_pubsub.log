@@ -1,0 +1,9 @@
+1627232064.435 : control_pubsub       : 15040 : 35184372371984 : DEBUG    : bridge control_pubsub init
+1627232064.435 : control_pubsub       : 15040 : 35184372371984 : INFO     : initialize bridge control_pubsub
+1627232064.436 : control_pubsub       : 15040 : 35184372371984 : INFO     : bridge pub on  control_pubsub: tcp://10.134.0.42:34997
+1627232064.436 : control_pubsub       : 15040 : 35184372371984 : INFO     :        sub on  control_pubsub: tcp://10.134.0.42:38811
+1627232064.437 : control_pubsub       : 15040 : 35184372371984 : INFO     : started bridge control_pubsub
+1627232064.439 : control_pubsub       : 15040 : 35184372371984 : INFO     : connect pub to heartbeat: tcp://10.134.0.42:32913
+1627232064.439 : control_pubsub       : 15040 : 35184372371984 : DEBUG    : start heartbeat
+1627232064.439 : control_pubsub       : 15040 : 35184372371984 : INFO     : connect sub to heartbeat: tcp://10.134.0.42:36295
+1627232064.440 : control_pubsub       : 15040 : 35184372371984 : DEBUG    : ~~ heartbeat: heartbeat
