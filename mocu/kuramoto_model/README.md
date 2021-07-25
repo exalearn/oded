@@ -1,4 +1,4 @@
-A Workflow-based MOCU Implementation using RADICAL Cybertools (RCT EnTK)
+A Workflow-based MOCU Implementation using RADICAL Cybertools
 
 **Installation (MOCU and RCT)**
 
@@ -11,15 +11,12 @@ pip install radical.entk radical.pilot radical.saga radical.utils --upgrade
 pip install pycuda
 ```
 
-**Run**
+**Two Levels of Parallelism**
 
-```
-source setup.sh
-python mocu_entk.py -n 120 # -n specifies the number of simulations and each simulation runs on one GPU
-```
+1. Parallelizing different simulations (one simulation per GPU) using RADICAL EnTK
 
-<!--Next see `run.sh` for possible commands to run on ORNL Summit.
+* See `num_sim_entk` folder.
 
-**Performance**
+2. Parallelizing computation of expected remaining MOCU (one MOCU function call per GPU) using RADICAL RP (function execution feature)
 
-See the `profiling` directory for scaling test results.-->
+* See `remainingMOCU_func_exec_rp` folder.
