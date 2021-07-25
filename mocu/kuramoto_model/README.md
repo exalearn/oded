@@ -11,7 +11,7 @@ pip install radical.entk radical.pilot radical.saga radical.utils --upgrade
 pip install pycuda
 ```
 
-**Run**
+**Two Types of Parallelism**
 
 ```
 source setup.sh
