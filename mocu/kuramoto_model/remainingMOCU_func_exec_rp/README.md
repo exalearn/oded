@@ -1,4 +1,4 @@
-An RCT RP Workflow Parallelizing Computation of Remaining MOCU using the Function Execution Feature
+An RCT RP Workflow Parallelizing Computation of Remaining MOCU using RP Function Execution Feature
 
 **Installation (MOCU and RCT)**
 
