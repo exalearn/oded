@@ -1,0 +1,17 @@
+#!/bin/bash
+#BSUB -P MED110
+#BSUB -J mocu
+#BSUB -o %J.out
+#BSUB -e %J.err
+#BSUB -W 420
+#BSUB -nnodes 1
+
+#jsrun --smpiargs="off" -n 1 -a 1 -g 1 python run_openmm.py -f pdb/100-fs-peptide-400K.pdb
+#jsrun --smpiargs="off" -n 1 -a 1 -g 1 python run_openmm.py --pdb_file pdb/3pbl.pdb --topol pdb/topol.top --length 100
+
+. /ccs/home/litan/miniconda3/etc/profile.d/conda.sh
+conda activate mocu
+module load cuda
+export PYCUDA_CACHE_DIR=/gpfs/alpine/csc299/scratch/litan/.cache
+
+jsrun -n 1 -a 1 -c 1 -g 1 python runMainForPerformanceMeasure.py
