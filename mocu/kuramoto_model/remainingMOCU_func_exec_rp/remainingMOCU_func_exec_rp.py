@@ -506,7 +506,7 @@ def findMOCUSequence(syncThresholds, isSynchronized, MOCUInitial, K_max, w, N, h
             report.header('gather results')
             tmgr.wait_tasks()
 
-        print("Num_remainning_MOCU: ", ExprCount)
+        print("Num_remaining_MOCU: ", ExprCount)
         ExprCountConst = ExprCount
         if (not isInitiallyComputed2) or iterative:
             # Computing the expected remaining MOCU
