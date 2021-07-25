@@ -1,9 +1,0 @@
-1627232063.413 : agent_schedule_pubsub : 14882 : 35184372371984 : DEBUG    : bridge agent_schedule_pubsub init
-1627232063.413 : agent_schedule_pubsub : 14882 : 35184372371984 : INFO     : initialize bridge agent_schedule_pubsub
-1627232063.414 : agent_schedule_pubsub : 14882 : 35184372371984 : INFO     : bridge pub on  agent_schedule_pubsub: tcp://10.134.0.42:46861
-1627232063.414 : agent_schedule_pubsub : 14882 : 35184372371984 : INFO     :        sub on  agent_schedule_pubsub: tcp://10.134.0.42:41711
-1627232063.415 : agent_schedule_pubsub : 14882 : 35184372371984 : INFO     : started bridge agent_schedule_pubsub
-1627232063.417 : agent_schedule_pubsub : 14882 : 35184372371984 : INFO     : connect pub to heartbeat: tcp://10.134.0.42:32913
-1627232063.417 : agent_schedule_pubsub : 14882 : 35184372371984 : DEBUG    : start heartbeat
-1627232063.418 : agent_schedule_pubsub : 14882 : 35184372371984 : INFO     : connect sub to heartbeat: tcp://10.134.0.42:36295
-1627232063.418 : agent_schedule_pubsub : 14882 : 35184372371984 : DEBUG    : ~~ heartbeat: heartbeat

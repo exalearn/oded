@@ -1,7 +1,0 @@
-#time,event,comp,thread,uid,state,msg
-1627231978.5892179,sync_abs,tmgr_staging_output.0000,MainThread,,,login4.summit.olcf.ornl.gov:10.134.0.34:1627231978.5889208:1627231978.5929728:ntp
-1627231978.5912204,comp_start,tmgr_staging_output.0000,MainThread,tmgr_staging_output.0000,,
-#time,event,comp,thread,uid,state,msg
-1627231978.8495669,sync_abs,tmgr_staging_output.0000,MainThread,,,login4.summit.olcf.ornl.gov:10.134.0.34:1627231978.8493671:1627231978.853419:ntp
-1627231978.8496022,init1,tmgr_staging_output.0000,MainThread,tmgr_staging_output.0000,,/gpfs/alpine/csc299/scratch/litan/MOCU/Byung-Jun/new/ExaLearn-ODED-Kuramoto-main/N7/github/oded/mocu/kuramoto_model/remainingMOCU_func_exec_rp/rp.session.login4.litan.018833.0000
-1627231978.8536401,component_init,tmgr_staging_output.0000,Thread-1,,,

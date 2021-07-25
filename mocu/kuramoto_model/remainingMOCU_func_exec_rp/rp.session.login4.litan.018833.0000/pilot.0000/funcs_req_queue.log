@@ -1,9 +1,0 @@
-1627232064.636 : funcs_req_queue      : 15067 : 35184372371984 : DEBUG    : bridge funcs_req_queue init
-1627232064.636 : funcs_req_queue      : 15067 : 35184372371984 : INFO     : start bridge funcs_req_queue
-1627232064.637 : funcs_req_queue      : 15067 : 35184372371984 : INFO     : bridge in  funcs_req_queue: tcp://10.134.0.42:45899
-1627232064.637 : funcs_req_queue      : 15067 : 35184372371984 : INFO     :        out funcs_req_queue: tcp://10.134.0.42:32857
-1627232064.638 : funcs_req_queue      : 15067 : 35184372371984 : INFO     : started bridge funcs_req_queue
-1627232064.639 : funcs_req_queue      : 15067 : 35184372371984 : INFO     : connect pub to heartbeat: tcp://10.134.0.42:32913
-1627232064.640 : funcs_req_queue      : 15067 : 35184372371984 : DEBUG    : start heartbeat
-1627232064.640 : funcs_req_queue      : 15067 : 35184372371984 : INFO     : connect sub to heartbeat: tcp://10.134.0.42:36295
-1627232064.640 : funcs_req_queue      : 15067 : 35184372371984 : DEBUG    : ~~ heartbeat: heartbeat

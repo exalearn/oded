@@ -1,9 +1,0 @@
-1627232065.078 : state_pubsub         : 15178 : 35184372371984 : DEBUG    : bridge state_pubsub init
-1627232065.078 : state_pubsub         : 15178 : 35184372371984 : INFO     : initialize bridge state_pubsub
-1627232065.079 : state_pubsub         : 15178 : 35184372371984 : INFO     : bridge pub on  state_pubsub: tcp://10.134.0.42:46375
-1627232065.079 : state_pubsub         : 15178 : 35184372371984 : INFO     :        sub on  state_pubsub: tcp://10.134.0.42:40243
-1627232065.080 : state_pubsub         : 15178 : 35184372371984 : INFO     : started bridge state_pubsub
-1627232065.082 : state_pubsub         : 15178 : 35184372371984 : INFO     : connect pub to heartbeat: tcp://10.134.0.42:32913
-1627232065.082 : state_pubsub         : 15178 : 35184372371984 : DEBUG    : start heartbeat
-1627232065.082 : state_pubsub         : 15178 : 35184372371984 : INFO     : connect sub to heartbeat: tcp://10.134.0.42:36295
-1627232065.083 : state_pubsub         : 15178 : 35184372371984 : DEBUG    : ~~ heartbeat: heartbeat

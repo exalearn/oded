@@ -1,9 +1,0 @@
-1627232063.613 : agent_scheduling_queue : 14896 : 35184372371984 : DEBUG    : bridge agent_scheduling_queue init
-1627232063.613 : agent_scheduling_queue : 14896 : 35184372371984 : INFO     : start bridge agent_scheduling_queue
-1627232063.614 : agent_scheduling_queue : 14896 : 35184372371984 : INFO     : bridge in  agent_scheduling_queue: tcp://10.134.0.42:43309
-1627232063.614 : agent_scheduling_queue : 14896 : 35184372371984 : INFO     :        out agent_scheduling_queue: tcp://10.134.0.42:39249
-1627232063.615 : agent_scheduling_queue : 14896 : 35184372371984 : INFO     : started bridge agent_scheduling_queue
-1627232063.617 : agent_scheduling_queue : 14896 : 35184372371984 : INFO     : connect pub to heartbeat: tcp://10.134.0.42:32913
-1627232063.618 : agent_scheduling_queue : 14896 : 35184372371984 : DEBUG    : start heartbeat
-1627232063.618 : agent_scheduling_queue : 14896 : 35184372371984 : INFO     : connect sub to heartbeat: tcp://10.134.0.42:36295
-1627232063.618 : agent_scheduling_queue : 14896 : 35184372371984 : DEBUG    : ~~ heartbeat: heartbeat
