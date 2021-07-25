@@ -1,4 +1,4 @@
-A Workflow-based MOCU Implementation using RADICAL Cybertools (RCT EnTK)
+An RCT EnTK Workflow Parallelizing Different Simulations on GPUs
 
 **Installation (MOCU and RCT)**
 
