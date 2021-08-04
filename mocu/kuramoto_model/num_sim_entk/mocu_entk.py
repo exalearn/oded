@@ -3,11 +3,6 @@ import os
 import argparse, sys, math
 
 import numpy as np
-from mocu.utils.utils import *
-from mocu.utils.costfunctions import *
-from mocu.src.experimentaldesign import *
-from mocu.src.mocu_utils import *
-from mocu.scripts.example_linearsys import *
 
 class MOCU(object):
 
