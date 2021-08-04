@@ -1,7 +1,6 @@
 from radical import entk
 import os
 import argparse, sys, math
-
 import numpy as np
 
 class MOCU(object):
