@@ -9,7 +9,7 @@ conda activate mocu
 pip install radical.entk radical.pilot radical.saga radical.utils --upgrade
 
 pip install pycuda
-conda install numpy pandas
+conda install numpy pandas matplotlib
 ```
 
 **Run**
